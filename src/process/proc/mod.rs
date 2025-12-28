@@ -144,7 +144,7 @@ impl ProcData {
     pub fn init_context(&mut self) {
         self.context.clear();
         self.context.set_ra(fork_ret as *const () as usize);
-        self.context.set_sp(self.kstack + PGSIZE*8);
+        self.context.set_sp(self.kstack + PGSIZE*4);
     }
 
     /// Return the process's mutable reference of context
